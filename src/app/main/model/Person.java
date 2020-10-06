@@ -6,12 +6,11 @@ public class Person {
 	private String phone;
 	private Address address;
 
-	public Person(String fname, String lname, String phone, Address address) {
+	public Person(String fname, String lname, String phone) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
 		this.phone = phone;
-		this.address = address;
 	}
 
 	public String getFname() {

@@ -1,5 +1,6 @@
 package app.main.model;
 
-public class Role {
+public enum Role {
+	LIBRARIAN, ADMINISTRATOR, BOTH
 
 }
