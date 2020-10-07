@@ -6,11 +6,11 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-public class UI extends Application {
+public class AddNewMemberScreen extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("AddNewMemberScreen.fxml"));
 			Scene scene = new Scene(root,640,400);
 			primaryStage.setScene(scene);
 			primaryStage.show();
