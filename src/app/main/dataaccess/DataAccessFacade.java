@@ -1,30 +1,50 @@
 package app.main.dataaccess;
 
 import java.util.Collection;
+import java.util.HashMap;
 
 import app.main.model.Book;
 import app.main.model.CheckoutRecord;
 import app.main.model.LibraryMember;
 import app.main.model.User;
+import app.main.utils.FileUtils;
 
-public class DataAccessFacade implements DataAccess{
+public class DataAccessFacade implements DataAccess {
+	HashMap<String, Book> books;
 
 	@Override
 	public void addNewBook(Book book) {
-		// TODO Auto-generated method stub
-		
+		books.put(book.getIsbn(), book);
 	}
 
 	@Override
 	public void updateBook(Book newBook) {
-		// TODO Auto-generated method stub
-		
+		addNewBook(newBook);	
 	}
 
 	@Override
-	public Book findBookById(String id) {
+	public Book searchBook(String isbn) {
 		// TODO Auto-generated method stub
-		return null;
+		HashMap<String, Book> bookmap = (HashMap<String, Book>) readData(books, Book.TYPE);
+		return bookmap.get(isbn);
+	}
+
+	private Object readData(Object data, String type) {
+		// TODO Auto-generated method stub
+		if (data !=null) {
+			return data;
+		}
+		//read book data from file in the first time
+		try {
+					
+				Object result = FileUtils.readObject(type);
+				data = result != null ? result : new HashMap();
+					
+			} catch (Exception e) {
+					e.printStackTrace();
+			}
+				
+			return data;
 	}
 
 	@Override
@@ -92,5 +112,10 @@ public class DataAccessFacade implements DataAccess{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
+	
+
+	
 
 }

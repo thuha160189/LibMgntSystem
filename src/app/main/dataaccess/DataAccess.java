@@ -15,7 +15,7 @@ public interface DataAccess {
 
 		public void updateBook(Book newBook);
 
-		public Book findBookById(String id);
+		public Book searchBook(String isbn);
 		
 		public Collection<Book> getAllBooks();
 		  
