@@ -5,6 +5,13 @@ public class Person {
 	private String lname;
 	private String phone;
 	private Address address;
+	
+	public Person() {
+		this.fname = "";
+		this.lname = "";
+		this.address = null;
+		this.phone = "";
+	}
 
 	public Person(String fname, String lname, String phone) {
 		super();

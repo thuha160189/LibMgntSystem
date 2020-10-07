@@ -5,8 +5,13 @@ import java.util.List;
 public class User {
 	private String userName;
 	private String password;
-	private List<Role> role;
-	public User(String userName, String password, List<Role> role) {
+	private Role role;
+	
+	public User(String userName, String password) {
+		this.userName = userName;
+		this.password = password;
+	}
+	public User(String userName, String password, Role role) {
 		super();
 		this.userName = userName;
 		this.password = password;
@@ -20,10 +25,10 @@ public class User {
 		return password;
 	}
 	
-	public List<Role> getRole() {
+	public Role getRole() {
 		return role;
 	}
-	public void setRole(List<Role> role) {
+	public void setRole(Role role) {
 		this.role = role;
 	}
 	

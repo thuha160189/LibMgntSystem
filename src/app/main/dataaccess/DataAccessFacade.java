@@ -26,7 +26,7 @@ public class DataAccessFacade implements DataAccess {
 	public Book searchBook(String isbn) {
 		// TODO Auto-generated method stub
 		HashMap<String, Book> bookmap = (HashMap<String, Book>) readData(books, Book.TYPE);
-		return bookmap.get(isbn);
+		return bookmap.get(books);
 	}
 
 	private Object readData(Object data, String type) {

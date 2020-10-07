@@ -22,6 +22,14 @@ public class CheckoutRecordEntry {
 	public BookCopy getBookCopy() {
 		return bookCopy;
 	}
+	public void setCheckoutDate(LocalDate now) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setDueDate(LocalDate value) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 

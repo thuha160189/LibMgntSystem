@@ -18,6 +18,10 @@ public class CheckoutRecord {
 	public void setCheckoutRecordEntry(List<CheckoutRecordEntry> checkoutRecordEntry) {
 		this.checkoutRecordEntry = checkoutRecordEntry;
 	}
+
+	
+
+	
 	
 
 }

@@ -10,7 +10,7 @@ public class UI extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("BookEditDialog.fxml"));
 			Scene scene = new Scene(root,640,400);
 			primaryStage.setScene(scene);
 			primaryStage.show();

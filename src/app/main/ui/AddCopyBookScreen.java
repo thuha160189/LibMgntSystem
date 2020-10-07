@@ -10,7 +10,7 @@ public class AddCopyBookScreen extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("AddNewMemberScreen.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("AddCopyBookScreen.fxml"));
 			Scene scene = new Scene(root,640,400);
 			primaryStage.setScene(scene);
 			primaryStage.show();

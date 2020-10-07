@@ -15,6 +15,9 @@ public class Book implements Serializable {
 	public List<BookCopy> getBookCopy() {
 		return bookCopy;
 	}
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
 	public Book(String title, String isbn, int maxCheckoutLength, List<Author> author, List<BookCopy> bookCopy) {
 		super();
 		this.title = title;
@@ -35,6 +38,23 @@ public class Book implements Serializable {
 	public List<Author> getAuthor() {
 		return author;
 	}
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public void setMaxCheckoutLength(int maxCheckoutLength) {
+		this.maxCheckoutLength = maxCheckoutLength;
+	}
+	public void setAuthor(List<Author> author) {
+		this.author = author;
+	}
+	public void setBookCopy(List<BookCopy> bookCopy) {
+		this.bookCopy = bookCopy;
+	}
+	
+	
 	
 	
 
