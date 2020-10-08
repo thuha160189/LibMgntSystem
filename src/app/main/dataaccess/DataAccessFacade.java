@@ -1,8 +1,10 @@
 package app.main.dataaccess;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+
 
 import app.main.model.*;
 
@@ -32,6 +34,43 @@ public class DataAccessFacade implements DataAccess{
 			System.out.println("Loading users");
 			
 	  return users;
+		
+		
+	}
+	
+public List<Book> loadBooks(){
+	Author a1 = new Author("Jonas", "Carlos", "310-231-5545", "Phd");
+	Author a2 = new Author("Moahan", "Lar", "310-231-5045", "Beachlor");
+	Author a3 = new Author("Hale", "Carlos", "310-231-5545", "Dr.Computer Science");
+	Author a4 = new Author("Hailian", "Barbara", "310-231-5045", "Phd");
+	Author a5 = new Author("Ghimari", "Barbara", "310-231-5045", "Master");
+
+	
+		List<Author> la1 = new ArrayList<>();
+		la1.add(a1);
+		la1.add(a2);
+		List<Author> la2 = new ArrayList<>();
+		la2.add(a3);
+		la2.add(a4);
+		List<Author> la3 = new ArrayList<>();
+		la3.add(a3);
+		la3.add(a5);
+
+
+		Book b1 = new Book("Book1 ", 999999,  21, la1);
+		Book b2 = new Book("Book2 ", 888888,  22, la2);
+		Book b3 = new Book("Book2 ", 777777,  23, la3);
+
+		
+		List<Book> books = new ArrayList<>();
+		books.add(b1);
+		books.add(b2);
+		books.add(b3);
+		
+		
+	
+		
+	  return books;
 		
 		
 	}
@@ -138,6 +177,14 @@ public class DataAccessFacade implements DataAccess{
 	public String getLoginUserUsername() {
 		return this.loginUser.getUserName();
 	}
+
+	@Override
+	public void addNewLibriaryMember() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 	
 

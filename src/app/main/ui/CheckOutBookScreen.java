@@ -32,9 +32,9 @@ public class CheckOutBookScreen {
 
     @FXML
     private TextField txtMemberId;
-
+    
     @FXML
-    private TextField btnIsbn;
+    private TextField txtIsbn;   
 
     @FXML
     private Button btnBack;
@@ -59,6 +59,12 @@ public class CheckOutBookScreen {
 
     @FXML
     void eventCheckOut(ActionEvent event) {
+    	
+    	int memberId= Integer.parseInt(this.txtMemberId.getText().trim());
+    	int isbn= Integer.parseInt(this.txtIsbn.getText().trim());
+    	
+    	System.out.println("Member with ID "+memberId + " is checking out record for book "+isbn);
+    	
 
     }
 

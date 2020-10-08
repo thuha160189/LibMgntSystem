@@ -12,6 +12,13 @@ public class Author extends Person {
 	public String getCredentials() {
 		return credentials;
 	}
+
+	@Override
+	public String toString() {
+		return "Author [credentials=" + credentials + "]";
+	}
+	
+	
 	
 
 	

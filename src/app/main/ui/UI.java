@@ -6,6 +6,8 @@ import java.util.List;
 import app.main.dataaccess.DataAccessFacade;
 import app.main.model.Role;
 import app.main.model.User;
+import app.main.model.Book;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -50,14 +52,17 @@ public class UI extends Application {
     private Label lblUsername;
 	
 	private List<User> users;
+	private List<Book> books;
+
 	
-	private DataAccessFacade df;
+	private DataAccessFacade database;
 	
 	
 	@FXML
     void initialize() {
-		df=new DataAccessFacade();
-		this.users=df.loadUsers();
+		database=new DataAccessFacade();
+		this.users=database.loadUsers();
+		this.books=database.loadBooks();
     }
 	
 
@@ -85,7 +90,7 @@ public class UI extends Application {
                 Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));	
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                this.df.setLoginUser(user);
+                this.database.setLoginUser(user);
                 stage.show();
     			break;
     		}else {
@@ -109,7 +114,7 @@ public class UI extends Application {
     			
     			return "LibraryHomeScreen.fxml";
     		}
-    	}else {
+    	}else { //both admin and librian
     		return "HomeScreen.fxml";
     	}
 		

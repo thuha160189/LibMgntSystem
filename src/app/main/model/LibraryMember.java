@@ -17,6 +17,14 @@ public class LibraryMember extends Person{
 	public CheckoutRecord getCheckoutRecord() {
 		return checkoutRecord;
 	}
+
+	@Override
+	public String toString() {
+		return "LibraryMember [memberId=" + memberId + ", checkoutRecord=" + checkoutRecord + "]"+
+	
+"Address [street=" + this.getAddress().getStreet() + ", city=" + this.getAddress().getCity()  + ", state=" + this.getAddress().getState() + ", zip=" + this.getAddress().getZip()  + "]";
+	}
+
 	
 
 

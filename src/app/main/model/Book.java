@@ -27,6 +27,12 @@ public class Book {
 	public List<Author> getAuthor() {
 		return author;
 	}
+	@Override
+	public String toString() {
+		return "Book [title=" + title + ", isbn=" + isbn + ", maxCheckoutLength=" + maxCheckoutLength + ", author="
+				+ author + "]";
+	}
+	
 	
 	
 

@@ -69,7 +69,7 @@ public class HomeScreen {
     @FXML
     void eventAddNewMember(ActionEvent event) throws IOException {
     	
-    	Stage stage = (Stage) this.btnAddNewMember.getScene().getWindow(); 			
+    	Stage stage = (Stage) this.lblUserName.getScene().getWindow(); 			
 		
 		String fxmlFile="AddNewMemberScreen.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));	
@@ -82,7 +82,7 @@ public class HomeScreen {
     @FXML
     void eventCheckOutBook(ActionEvent event) throws IOException {
     	
-    	Stage stage = (Stage) this.btnAddNewMember.getScene().getWindow(); 			
+    	Stage stage = (Stage) this.lblUserName.getScene().getWindow(); 			
 		
 		String fxmlFile="CheckOutBookScreen.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));	
