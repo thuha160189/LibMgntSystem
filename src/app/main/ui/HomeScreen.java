@@ -95,7 +95,7 @@ public class HomeScreen {
     @FXML
     void eventLogout(ActionEvent event) throws IOException {
     	
-    	Stage stage = (Stage) this.btnAddNewMember.getScene().getWindow();			
+    	Stage stage = (Stage) this.lblUserName.getScene().getWindow();			
 		String fxmlFile="LoginScreen.fxml";
         Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));	
         Scene scene = new Scene(root);

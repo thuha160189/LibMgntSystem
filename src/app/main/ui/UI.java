@@ -24,7 +24,7 @@ public class UI extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));		    
+			Parent root = FXMLLoader.load(getClass().getResource("AdminHomeScreen.fxml"));		    
 	        Scene scene = new Scene(root, 640, 400);	    
 	        stage.setTitle("Login Form ");
 	        stage.setScene(scene);
