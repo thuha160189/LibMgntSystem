@@ -1,6 +1,7 @@
 package app.main.dataaccess;
 
 import java.util.Collection;
+import java.util.List;
 
 import app.main.model.Book;
 import app.main.model.CheckoutRecord;
@@ -10,7 +11,12 @@ import app.main.model.User;
 
 
 public interface DataAccess {
+	
+	
 	//Book function
+	
+		public List<User> loadUsers();
+		
 		public void addNewBook(Book book);
 
 		public void updateBook(Book newBook);

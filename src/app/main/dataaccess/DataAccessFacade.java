@@ -1,14 +1,49 @@
 package app.main.dataaccess;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
-import app.main.model.Book;
-import app.main.model.CheckoutRecord;
-import app.main.model.LibraryMember;
-import app.main.model.User;
+import app.main.model.*;
 
 public class DataAccessFacade implements DataAccess{
-
+	
+	public List<User> loadUsers(){
+		
+		List<Role> admin= new ArrayList();
+		admin.add(Role.ADMINISTRATOR);	
+		User u1=new User("admin", "pass",admin );
+		
+		
+		List<Role> librarian= new ArrayList();
+		librarian.add(Role.LIBRARIAN);	
+		User u2=new User("librian", "pass",librarian );
+		
+		List<Role> both= new ArrayList();
+		both.add(Role.LIBRARIAN);
+		both.add(Role.ADMINISTRATOR);	
+		User u3=new User("both", "pass",both);
+		
+		List<User> users=new ArrayList<User>();
+			users.add(u1);
+			users.add(u2);
+			users.add(u3);
+			
+			System.out.println("Loading users");
+			
+	  return users;
+		
+		
+	}
+	
+	public Role[] LoadRole(){
+		
+		Role[] roles= {Role.ADMINISTRATOR,Role.LIBRARIAN};
+		
+		return roles;
+		
+	}
+	
 	@Override
 	public void addNewBook(Book book) {
 		// TODO Auto-generated method stub
@@ -92,5 +127,20 @@ public class DataAccessFacade implements DataAccess{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	private User loginUser;
+
+	public void setLoginUser(User user) {
+		this.loginUser=user;
+		
+	}
+	
+	public String getLoginUserUsername() {
+		return this.loginUser.getUserName();
+	}
+
+	
+
+	
 
 }

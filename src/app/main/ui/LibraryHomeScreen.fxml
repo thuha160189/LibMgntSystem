@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.main.ui.HomeScreen">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #696969;" VBox.vgrow="ALWAYS">
       <children>
@@ -15,17 +15,17 @@
             <Font name="Comic Sans MS Bold" size="22.0" />
           </font>
         </Label>
-            <Button id="loginScreen" defaultButton="true" layoutX="247.0" layoutY="159.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: #1759ff;" text="CheckOutBook" textFill="#f8f8f8">
+            <Button id="loginScreen" fx:id="btnCheckOutBook" defaultButton="true" layoutX="247.0" layoutY="193.0" mnemonicParsing="false" onAction="#eventCheckOutBook" onDragDetected="#eventAddCopyBook" prefHeight="48.0" prefWidth="166.0" style="-fx-background-color: #1759ff;" text="CheckOutBook" textFill="#f8f8f8">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" layoutX="320.0" layoutY="73.0" text="Libiarian Login By:" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="320.0" layoutY="73.0" text="Librian Login By:" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Italic" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="482.0" layoutY="73.0" text="Mohan Lar" textAlignment="CENTER" textFill="#3cff00">
+            <Label fx:id="lblUserName" alignment="CENTER" layoutX="482.0" layoutY="73.0" text="Mohan Lar" textAlignment="CENTER" textFill="#3cff00">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
@@ -35,13 +35,13 @@
                   <Font name="Arial" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="482.0" layoutY="104.0" mnemonicParsing="false" text="Logout" textFill="#9d0d0d" />
+            <Button fx:id="btnLogout" layoutX="482.0" layoutY="104.0" mnemonicParsing="false" onAction="#eventLogout" text="Logout" textFill="#9d0d0d" />
             <Label alignment="CENTER" layoutX="378.0" layoutY="95.0" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial" size="18.0" />
                </font>
             </Label>
-            <Button id="loginScreen" defaultButton="true" layoutX="247.0" layoutY="243.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="164.0" style="-fx-background-color: #1759ff;" text="AddNewMember" textFill="#f8f8f8">
+            <Button id="loginScreen" fx:id="btnAddNewMember" defaultButton="true" layoutX="247.0" layoutY="273.0" mnemonicParsing="false" onAction="#eventAddNewMember" prefHeight="48.0" prefWidth="166.0" style="-fx-background-color: #1759ff;" text="AddNewMember" textFill="#f8f8f8">
                <font>
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
