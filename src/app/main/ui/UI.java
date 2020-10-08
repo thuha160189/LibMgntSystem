@@ -24,7 +24,7 @@ public class UI extends Application {
 	@Override
 	public void start(Stage stage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("AdminHomeScreen.fxml"));		    
+			Parent root = FXMLLoader.load(getClass().getResource("LoginScreen.fxml"));		    
 	        Scene scene = new Scene(root, 640, 400);	    
 	        stage.setTitle("Login Form ");
 	        stage.setScene(scene);
@@ -77,12 +77,9 @@ public class UI extends Application {
     		
     		if(pass.equals(typePass) && userName.equals(typeUserName)) {
     			
-    			this.lblUsername.setVisible(false);
-    			
-    			System.out.println("Login Successfully");
-    			
-    			Stage stage = (Stage) this.btnLogin.getScene().getWindow(); 			
-    			
+    			this.lblUsername.setVisible(false);    			
+    			System.out.println("Login Successfully");    			
+    			Stage stage = (Stage) this.btnLogin.getScene().getWindow();
     			String fxmlFile=this.checkRole(user);
     			System.out.println(fxmlFile);
                 Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));	
