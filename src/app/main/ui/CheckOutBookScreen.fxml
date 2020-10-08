@@ -60,7 +60,7 @@
                </font>
             </Label>
             <TextField fx:id="txtMemberId" layoutX="294.0" layoutY="208.0" onAction="#eventMemberId" />
-            <TextField fx:id="btnIsbn" layoutX="294.0" layoutY="250.0" />
+            <TextField fx:id="txtIsbn" layoutX="294.0" layoutY="250.0" />
             <Button fx:id="btnBack" defaultButton="true" layoutX="395.0" layoutY="303.0" mnemonicParsing="false" onAction="#eventBack" style="-fx-background-color: #9d0d0d;" text="Back" textFill="WHITE">
                <font>
                   <Font size="14.0" />

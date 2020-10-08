@@ -14,7 +14,8 @@ public interface DataAccess {
 	
 	
 	//Book function
-	
+		public void addNewLibriaryMember();  // wer are adding data inoto database
+		
 		public List<User> loadUsers();
 		
 		public void addNewBook(Book book);

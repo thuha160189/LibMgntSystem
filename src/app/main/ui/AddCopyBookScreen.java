@@ -41,7 +41,12 @@ public class AddCopyBookScreen {
 
     @FXML
     void eventAddCopy(ActionEvent event) {
-
+    	String isbn=this.txtIsbn.getText().trim();
+    	String numOfCopy=this.txtNumberOfCopy.getText().trim();
+    	int numOfCopies= Integer.parseInt(numOfCopy);
+    	
+    	System.out.println("Book with isbn"+ isbn +"is adding number of copies of"+numOfCopy);
+    	
     }
 
     @FXML

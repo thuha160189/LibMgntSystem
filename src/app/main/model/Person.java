@@ -29,6 +29,12 @@ public class Person {
 		return phone;
 	}
 	
+	public void setAddress(Address a) {
+		this.address=a;
+		
+	}
+	
+	
 	
 
 }

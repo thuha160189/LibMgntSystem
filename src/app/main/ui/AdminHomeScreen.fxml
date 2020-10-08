@@ -46,6 +46,11 @@
                   <Font name="Comic Sans MS" size="18.0" />
                </font>
             </Button>
+            <Button id="loginScreen" fx:id="btnAddNewMember" defaultButton="true" layoutX="428.0" layoutY="193.0" mnemonicParsing="false" onAction="#eventAddNewMember" onDragDetected="#eventAddCopyBook" prefHeight="48.0" prefWidth="147.0" style="-fx-background-color: #1759ff;" text="AddNewMember" textFill="#f8f8f8">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Button>
       </children>
     </AnchorPane>
   </children>
